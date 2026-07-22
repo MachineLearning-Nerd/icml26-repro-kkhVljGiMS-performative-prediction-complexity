@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "title": "Performative prediction complexity — reproducibility gate",
+  "emoji": "🎯",
+  "space_id": null,
+  "paper": null,
+  "tags": [],
+  "updated_at": "2026-07-22T13:08:38+00:00",
+  "root": {
+    "slug": "index",
+    "title": "Performative prediction complexity — reproducibility gate",
+    "file": "pages/index.md",
+    "children": [
+      {
+        "slug": "overview",
+        "title": "Overview",
+        "file": "pages/overview/page.md",
+        "children": []
+      },
+      {
+        "slug": "c1-epsilon-threshold",
+        "title": "C1 epsilon threshold",
+        "file": "pages/c1-epsilon-threshold/page.md",
+        "children": []
+      },
+      {
+        "slug": "c2-quadratic-affine",
+        "title": "C2 quadratic affine",
+        "file": "pages/c2-quadratic-affine/page.md",
+        "children": []
+      },
+      {
+        "slug": "c3-tractability",
+        "title": "C3 tractability",
+        "file": "pages/c3-tractability/page.md",
+        "children": []
+      },
+      {
+        "slug": "c4-query-lower-bound",
+        "title": "C4 query lower bound",
+        "file": "pages/c4-query-lower-bound/page.md",
+        "children": []
+      },
+      {
+        "slug": "c5-convex-domain",
+        "title": "C5 convex domain",
+        "file": "pages/c5-convex-domain/page.md",
+        "children": []
+      },
+      {
+        "slug": "c6-strategic-classification",
+        "title": "C6 strategic classification",
+        "file": "pages/c6-strategic-classification/page.md",
+        "children": []
+      },
+      {
+        "slug": "methods",
+        "title": "Methods",
+        "file": "pages/methods/page.md",
+        "children": []
+      },
+      {
+        "slug": "negative-controls",
+        "title": "Negative controls",
+        "file": "pages/negative-controls/page.md",
+        "children": []
+      },
+      {
+        "slug": "tests-and-gate",
+        "title": "Tests and gate",
+        "file": "pages/tests-and-gate/page.md",
+        "children": []
+      },
+      {
+        "slug": "conclusion",
+        "title": "Conclusion",
+        "file": "pages/conclusion/page.md",
+        "children": []
+      }
+    ]
+  },
+  "agent_view_tokens": 1388,
+  "revision": "1784725718635846491"
+}

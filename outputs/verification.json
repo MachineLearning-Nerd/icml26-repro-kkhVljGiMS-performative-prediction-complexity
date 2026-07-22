@@ -1,0 +1,38 @@
+{
+  "paper": "kkhVljGiMS",
+  "source_sha256": "c32199596640624de68ae92f19d4db2324d837580da51db25910213388262b76",
+  "scope": "Source-pinned complexity-theorem contract plus finite threshold, affine/quadratic, query-scale, convex-domain, and strategic-objective controls; not an independent PPAD/PLS proof.",
+  "negative_controls": {
+    "wrong_epsilon_denominator_rejected": true,
+    "perturbed_affine_fixed_point_rejected": true
+  },
+  "claims": {
+    "C1": {
+      "status": "verified",
+      "epsilon_prime": 0.014666666666666666,
+      "threshold_cells": 4
+    },
+    "C2": {
+      "status": "verified",
+      "affine_quadratic_cells": 4
+    },
+    "C3": {
+      "status": "verified",
+      "tractability_cells": 4
+    },
+    "C4": {
+      "status": "verified",
+      "query_lower_scale_cells": 12
+    },
+    "C5": {
+      "status": "verified",
+      "convex_domain_source_anchor": true
+    },
+    "C6": {
+      "status": "verified",
+      "strategic_local_control": true
+    }
+  },
+  "verified_claims": 6,
+  "falsified_claims": 0
+}

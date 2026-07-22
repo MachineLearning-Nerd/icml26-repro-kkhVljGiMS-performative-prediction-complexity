@@ -1,0 +1,8 @@
+{
+  "paper": "kkhVljGiMS",
+  "gate": "passed",
+  "tests_passed": true,
+  "publication_gate_passed": true,
+  "verified_claims": 6,
+  "scope": "Source-pinned complexity-theorem contract plus finite threshold, affine/quadratic, query-scale, convex-domain, and strategic-objective controls; not an independent PPAD/PLS proof."
+}
