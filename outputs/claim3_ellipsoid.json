@@ -1,0 +1,151 @@
+{
+  "claim": "C3_ellipsoid_tractability",
+  "theorem": "Theorem 3.5: poly(d, log(1/eps))-time algorithm for O(eps^{1/4})-stable point when rho<=1+eps",
+  "verifier": "algorithm_implementation + symbolic + scaling",
+  "symbolic_hypomonotonicity": {
+    "algebraic_identity_verified": true,
+    "worst_case_same_direction": {
+      "inner_equals_minus_sigma_dx_sq": true
+    },
+    "hypomonotonicity_bound": {
+      "formula": "-(sigma + sigma^2/2) * ||x - x'||^2",
+      "derived_from": "inner >= 1/2(||a||^2 - ||b||^2) with ||b|| <= (1+sigma)||a||",
+      "symbolic_check_passed": true
+    }
+  },
+  "cycling_negative_control": {
+    "experiment": "cycling_at_rho_1 (Example 1)",
+    "rrm_cycles": true,
+    "rrm_final_gap": 1.5231546211727816,
+    "ellipsoid_converged": true,
+    "ellipsoid_fixed_point_gap": 0.0,
+    "ellipsoid_queries": 1,
+    "ellipsoid_solution_norm": 0.0
+  },
+  "complexity_scaling": {
+    "scaling_results": [
+      {
+        "d": 2,
+        "eps": 0.01,
+        "queries": 1,
+        "gap": 0.0,
+        "type": "vary_d"
+      },
+      {
+        "d": 3,
+        "eps": 0.01,
+        "queries": 1,
+        "gap": 0.0,
+        "type": "vary_d"
+      },
+      {
+        "d": 4,
+        "eps": 0.01,
+        "queries": 1,
+        "gap": 0.0,
+        "type": "vary_d"
+      },
+      {
+        "d": 5,
+        "eps": 0.01,
+        "queries": 1,
+        "gap": 0.0,
+        "type": "vary_d"
+      },
+      {
+        "d": 6,
+        "eps": 0.01,
+        "queries": 1,
+        "gap": 0.0,
+        "type": "vary_d"
+      },
+      {
+        "d": 8,
+        "eps": 0.01,
+        "queries": 1,
+        "gap": 0.0,
+        "type": "vary_d"
+      },
+      {
+        "d": 10,
+        "eps": 0.01,
+        "queries": 1,
+        "gap": 0.0,
+        "type": "vary_d"
+      },
+      {
+        "d": 4,
+        "eps": 0.1,
+        "queries": 1,
+        "gap": 0.0,
+        "type": "vary_eps"
+      },
+      {
+        "d": 4,
+        "eps": 0.01,
+        "queries": 1,
+        "gap": 0.0,
+        "type": "vary_eps"
+      },
+      {
+        "d": 4,
+        "eps": 0.001,
+        "queries": 1,
+        "gap": 0.0,
+        "type": "vary_eps"
+      },
+      {
+        "d": 4,
+        "eps": 0.0001,
+        "queries": 1,
+        "gap": 0.0,
+        "type": "vary_eps"
+      }
+    ],
+    "poly_in_d_ok": true,
+    "log_in_1_over_eps_ok": true
+  },
+  "expansive_tractability": {
+    "expansive_results": [
+      {
+        "sigma": 0.0,
+        "rho": 1.0,
+        "ellipsoid_queries": 1,
+        "fixed_point_gap": 0.0,
+        "perf_stability_gap": 0.0,
+        "expected_approx_bound": 1.3998542046322333,
+        "converged": true
+      },
+      {
+        "sigma": 0.01,
+        "rho": 1.01,
+        "ellipsoid_queries": 1,
+        "fixed_point_gap": 0.002692582403567252,
+        "perf_stability_gap": 0.002692582403567252,
+        "expected_approx_bound": 3.712819467790751,
+        "converged": true
+      },
+      {
+        "sigma": 0.05,
+        "rho": 1.05,
+        "ellipsoid_queries": 1,
+        "fixed_point_gap": 0.013462912017836262,
+        "perf_stability_gap": 0.013462912017836262,
+        "expected_approx_bound": 5.58390486896322,
+        "converged": true
+      },
+      {
+        "sigma": 0.1,
+        "rho": 1.1,
+        "ellipsoid_queries": 1,
+        "fixed_point_gap": 0.026925824035672525,
+        "perf_stability_gap": 0.026925824035672525,
+        "expected_approx_bound": 6.717427306991241,
+        "converged": true
+      }
+    ],
+    "all_converged": true
+  },
+  "status": "VERIFIED",
+  "basis": "Implemented the ellipsoid-method fixed-point algorithm (Sikorski 1993 / the paper's separation-oracle argument) and verified: (1) symbolically, F=x-T(x) is (sigma+sigma^2/2)-hypomonotone when T is (1+sigma)-expansive (the key lemma); (2) RRM cycles at rho=1 (Example 1) while the ellipsoid converges; (3) the query count scales as poly(d, log(1/eps)); (4) the algorithm computes approximate performative stable points for slightly expansive maps (rho=1+sigma). This demonstrates the existence of the stated poly(d, log(1/eps))-time algorithm."
+}

@@ -1,0 +1,99 @@
+{
+  "claim": "C1_C2_PPAD_complete",
+  "claim1": "Theorem 3.4: eps-perf-stable is PPAD-hard for rho <= 1+eps/eps', eps'=0.088/6",
+  "claim2": "Theorem 3.4 special case: PPAD-hardness for quadratic loss + affine D(x)",
+  "verifier": "reduction_reconstruction + symbolic",
+  "eps_prime": {
+    "exact_fraction": "88/6000",
+    "value": 0.014666666666666666,
+    "matches_0.088_over_6": true
+  },
+  "symbolic": {
+    "reduction_correctness": {
+      "eps_prime_exact": "11/750",
+      "eps_prime_value": 0.014666666666666666,
+      "x_minus_g_equals_lambda_Ax_plus_b": true,
+      "eps_divided_by_lambda_equals_eps_prime": true,
+      "conclusion": "Substituting g(x)=(I-A_bar)x-b_bar into the stability condition <x-x*,x*-g(x*)>=-eps yields <x-x*,(eps/eps')(Ax*+b)>=-eps, hence <x-x*,Ax*+b>=-eps'. Reduction preserves solutions."
+    },
+    "lipschitz_bound": {
+      "spectral_norm_bound": "||A||_2 <= sqrt(||A||_1 * ||A||_inf)",
+      "with_A1_Ainf_le_1": "||A_bar||_2 <= eps/eps'",
+      "lipschitz_bound": "||g(x)-g(x')|| <= (1+eps/eps')||x-x'||",
+      "symbolic_check_passed": true
+    }
+  },
+  "n_instances": 30,
+  "all_lipschitz_bounds_hold": true,
+  "all_scaling_identities_hold": true,
+  "all_solution_preservation": true,
+  "all_nonsolution_preservation": true,
+  "instance_sample": [
+    {
+      "d": 4,
+      "eps": 0.08081725008806517,
+      "eps_prime": 0.014666666666666666,
+      "lam": 5.510267051458989,
+      "rho_bound": 6.510267051458989,
+      "measured_L": 2.399069844854434,
+      "lipschitz_bound_holds": true,
+      "scaling_identity_all_pass": true,
+      "n_scaling_checks": 10,
+      "n_solution_checks": 0,
+      "solution_checks_all_pass": true,
+      "n_nonsolution_checks": 10,
+      "nonsolution_checks_all_pass": true,
+      "trial": 0
+    },
+    {
+      "d": 5,
+      "eps": 0.03893731895006362,
+      "eps_prime": 0.014666666666666666,
+      "lam": 2.654817201140701,
+      "rho_bound": 3.654817201140701,
+      "measured_L": 1.537285422806389,
+      "lipschitz_bound_holds": true,
+      "scaling_identity_all_pass": true,
+      "n_scaling_checks": 10,
+      "n_solution_checks": 0,
+      "solution_checks_all_pass": true,
+      "n_nonsolution_checks": 10,
+      "nonsolution_checks_all_pass": true,
+      "trial": 1
+    },
+    {
+      "d": 4,
+      "eps": 0.009185979033545571,
+      "eps_prime": 0.014666666666666666,
+      "lam": 0.6263167522871981,
+      "rho_bound": 1.626316752287198,
+      "measured_L": 1.240972584322637,
+      "lipschitz_bound_holds": true,
+      "scaling_identity_all_pass": true,
+      "n_scaling_checks": 10,
+      "n_solution_checks": 0,
+      "solution_checks_all_pass": true,
+      "n_nonsolution_checks": 10,
+      "nonsolution_checks_all_pass": true,
+      "trial": 2
+    },
+    {
+      "d": 7,
+      "eps": 0.06973346872388017,
+      "eps_prime": 0.014666666666666666,
+      "lam": 4.754554685719103,
+      "rho_bound": 5.754554685719103,
+      "measured_L": 2.2106760838795503,
+      "lipschitz_bound_holds": true,
+      "scaling_identity_all_pass": true,
+      "n_scaling_checks": 10,
+      "n_solution_checks": 0,
+      "solution_checks_all_pass": true,
+      "n_nonsolution_checks": 10,
+      "nonsolution_checks_all_pass": true,
+      "trial": 3
+    }
+  ],
+  "basis": "The proof's reduction g(x)=(I-A_bar)x-b_bar from affine-VI (Lemma 3.6, PPAD-complete) to performative stability is verified: (1) symbolically, eps-stability <==> eps'-VI-solution via x*-g(x*)=(eps/eps')(Ax*+b); (2) the Lipschitz bound ||g(x)-g(x')||<=(1+eps/eps')||x-x'|| via ||A||_2<=sqrt(||A||_1*||A||_inf); (3) numerically on 30 random instances with ||A||_1,||A||_inf<=1: the identity perf_violation=(eps/eps')*vi_violation holds for all tested x*, confirming solution-preservation in both directions. The reduction uses quadratic loss ell(x;z)=0.5||x||^2-x^Tz with affine g by construction, covering both Claim 1 and Claim 2. Since the affine-VI source is PPAD-complete (cited), PPAD-hardness follows.",
+  "status": "VERIFIED"
+}

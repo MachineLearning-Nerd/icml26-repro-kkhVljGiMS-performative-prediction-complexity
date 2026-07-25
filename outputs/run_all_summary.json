@@ -1,13 +1,38 @@
 {
   "paper": "kkhVljGiMS",
-  "total_verifiers": 1,
+  "total_verifiers": 6,
   "failed_verifiers": 0,
   "all_passed": true,
   "results": [
     {
       "module": "repro.src.run_publication_gate_shim",
       "exit": 0,
-      "elapsed_s": 0.667
+      "elapsed_s": 0.532
+    },
+    {
+      "module": "repro.verify.claim1_2_ppad_reduction",
+      "exit": 0,
+      "elapsed_s": 0.973
+    },
+    {
+      "module": "repro.verify.claim3_ellipsoid",
+      "exit": 0,
+      "elapsed_s": 0.976
+    },
+    {
+      "module": "repro.verify.claim4_query_lower",
+      "exit": 0,
+      "elapsed_s": 1.338
+    },
+    {
+      "module": "repro.verify.claim5_convex_domain",
+      "exit": 0,
+      "elapsed_s": 2.035
+    },
+    {
+      "module": "repro.verify.claim6_pls_reduction",
+      "exit": 0,
+      "elapsed_s": 1.552
     }
   ]
 }

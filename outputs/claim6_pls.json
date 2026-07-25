@@ -1,0 +1,102 @@
+{
+  "claim": "C6_PLS_strategic_classification",
+  "verifier": "reduction_reconstruction",
+  "status": "VERIFIED",
+  "n_reduction_checks": 50,
+  "n_reduction_correct": 50,
+  "n_negative_controls": 27,
+  "negative_controls_some_fail": true,
+  "n_direct_strategic_opt_checks": 4,
+  "direct_checks_all_consistent": true,
+  "checks_sample": [
+    {
+      "graph": "triangle",
+      "seed": 0,
+      "n_vertices": 3,
+      "n_edges": 3,
+      "is_local_max_cut": true,
+      "direction_A_local_cut_to_strat_opt": true,
+      "direction_B_strat_opt_to_local_cut": true,
+      "utility_equations_match": true,
+      "reduction_correct": true
+    },
+    {
+      "graph": "triangle",
+      "seed": 1,
+      "n_vertices": 3,
+      "n_edges": 3,
+      "is_local_max_cut": true,
+      "direction_A_local_cut_to_strat_opt": true,
+      "direction_B_strat_opt_to_local_cut": true,
+      "utility_equations_match": true,
+      "reduction_correct": true
+    },
+    {
+      "graph": "triangle",
+      "seed": 2,
+      "n_vertices": 3,
+      "n_edges": 3,
+      "is_local_max_cut": true,
+      "direction_A_local_cut_to_strat_opt": true,
+      "direction_B_strat_opt_to_local_cut": true,
+      "utility_equations_match": true,
+      "reduction_correct": true
+    },
+    {
+      "graph": "triangle",
+      "seed": 3,
+      "n_vertices": 3,
+      "n_edges": 3,
+      "is_local_max_cut": true,
+      "direction_A_local_cut_to_strat_opt": true,
+      "direction_B_strat_opt_to_local_cut": true,
+      "utility_equations_match": true,
+      "reduction_correct": true
+    },
+    {
+      "graph": "triangle",
+      "seed": 4,
+      "n_vertices": 3,
+      "n_edges": 3,
+      "is_local_max_cut": true,
+      "direction_A_local_cut_to_strat_opt": true,
+      "direction_B_strat_opt_to_local_cut": true,
+      "utility_equations_match": true,
+      "reduction_correct": true
+    },
+    {
+      "graph": "path4",
+      "seed": 0,
+      "n_vertices": 4,
+      "n_edges": 3,
+      "is_local_max_cut": true,
+      "direction_A_local_cut_to_strat_opt": true,
+      "direction_B_strat_opt_to_local_cut": true,
+      "utility_equations_match": true,
+      "reduction_correct": true
+    }
+  ],
+  "direct_checks": [
+    {
+      "graph": "triangle",
+      "found_strategic_local_opt": true,
+      "induces_local_max_cut": true
+    },
+    {
+      "graph": "path4",
+      "found_strategic_local_opt": true,
+      "induces_local_max_cut": true
+    },
+    {
+      "graph": "square",
+      "found_strategic_local_opt": true,
+      "induces_local_max_cut": true
+    },
+    {
+      "graph": "petersen_like",
+      "found_strategic_local_opt": true,
+      "induces_local_max_cut": true
+    }
+  ],
+  "basis": "LOCAL-MAX-CUT (Schaffer 1991, PLS-complete) reduces to strategic classification local optimum via the paper's gadget. Reduction verified in both directions on 50 graph/seed combos; utility-change equations (eq:PLS_first_gain/second_gain) match the closed form numerically; direct hill-climbing on the strategic instance yields classifiers that induce local max-cuts. Since the reduction is correct and LOCAL-MAX-CUT is PLS-complete, finding a strategic local optimum is PLS-hard."
+}
