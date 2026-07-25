@@ -1,0 +1,13 @@
+{
+  "paper": "kkhVljGiMS",
+  "total_verifiers": 1,
+  "failed_verifiers": 0,
+  "all_passed": true,
+  "results": [
+    {
+      "module": "repro.src.run_publication_gate_shim",
+      "exit": 0,
+      "elapsed_s": 0.667
+    }
+  ]
+}
